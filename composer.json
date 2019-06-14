@@ -1,0 +1,54 @@
+{
+    "name": "nedmas/laravel-ulid",
+    "description": "This package allows you to easily work with ULIDs (Universally Unique Lexicographically Sortable Identifiers) in your Laravel models.",
+    "keywords": [
+        "nedmas",
+        "laravel-ulid"
+    ],
+    "homepage": "https://github.com/nedmas/laravel-ulid",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Tom Densham",
+            "email": "nedmas@densham.technology",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nedmas\\LaravelUlid\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nedmas\\LaravelUlid\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Nedmas\\LaravelUlid\\LaravelUlidServiceProvider"
+            ],
+            "aliases": {
+                "LaravelUlid": "Nedmas\\LaravelUlid\\LaravelUlidFacade"
+            }
+        }
+    }
+}
