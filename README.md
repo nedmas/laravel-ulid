@@ -1,11 +1,11 @@
-# Very short description of the package
+# Laravel ULID
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/nedmas/laravel-ulid.svg?style=flat-square)](https://packagist.org/packages/nedmas/laravel-ulid)
 [![Build Status](https://img.shields.io/travis/nedmas/laravel-ulid/master.svg?style=flat-square)](https://travis-ci.org/nedmas/laravel-ulid)
 [![Quality Score](https://img.shields.io/scrutinizer/g/nedmas/laravel-ulid.svg?style=flat-square)](https://scrutinizer-ci.com/g/nedmas/laravel-ulid)
 [![Total Downloads](https://img.shields.io/packagist/dt/nedmas/laravel-ulid.svg?style=flat-square)](https://packagist.org/packages/nedmas/laravel-ulid)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+This package allows you to easily work with ULIDs (Universally Unique Lexicographically Sortable Identifiers) in your Laravel models.
 
 ## Installation
 
@@ -18,7 +18,13 @@ composer require nedmas/laravel-ulid
 ## Usage
 
 ``` php
-// Usage description here
+use Illuminate\Database\Eloquent\Model;
+use Nedmas\Concerns\GeneratesUlid;
+
+class Post extends Model
+{
+    use GeneratesUlid;
+} 
 ```
 
 ### Testing
